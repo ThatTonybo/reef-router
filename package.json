@@ -1,6 +1,6 @@
 {
   "name": "reef-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple, single page router for Reef by Chris Ferdinandi",
   "main": "dist/reef-router.js",
   "directories": {
@@ -11,9 +11,11 @@
   },
   "keywords": [
     "reef",
+    "reefjs",
     "router",
     "routing",
-    "reefjs"
+    "javascript",
+    "html"
   ],
   "author": "ThatTonybo <thattonybo@gmail.com>",
   "license": "MIT",

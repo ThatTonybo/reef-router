@@ -88,8 +88,6 @@ new ReefRouter({
     // {id} is the page ID
     // {appName} is the appName option provided
     pageTitleFormat: '{title} | {appName}',
-
-
 });
 ```
 
