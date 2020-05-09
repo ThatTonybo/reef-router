@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kraken-css@12.0.3/dist/main.min.css" type="text/css" />
+
+    <title>reef-router</title>
+    
+    <style>
+        nav {
+            background-color: black;
+            padding: 4px 24px;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        div#app {
+            padding: 4px 24px;
+        }
+
+        div#app h1, div#app p {
+            margin: 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div id="app"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reefjs/dist/reef.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reef-router"></script>
+
+    <script>
+        const navbar = new Reef('#navbar', { template: `
+            <nav>
+                <a id="home" router-page="home" onclick="router.change('home');">Home</a>
+                <a id="about" router-page="about" onclick="router.change('about');">About</a>
+                <a id="contact" router-page="contact" onclick="router.change('contact');">Contact</a>
+            </nav>
+        ` });
+
+        const app = new Reef('#app', {
+            template: (props) => {
+                if (props.page === 'home') {
+                    return `
+                    <h1>Home</h1>
+                    <p>This is the reef-router example</p>
+                    `;
+		        }
+
+		        if (props.page === 'about') {
+                    return `
+                    <h1>About</h1>
+                    <p>Example text</p>
+                    `;
+                }
+                
+                if (props.page === 'contact') {
+                    return `
+                    <h1>Contact</h1>
+                    <p>Example text</p>
+                    `;
+		        }
+            },
+	        data: { page: 'home' }
+        });
+
+        const router = new ReefRouter({
+            main: app,
+            appName: 'reef-router Example',
+            pageTitleFormat: '{appName}: {title}',
+	        pages: {
+		        'home': 'Home',
+                'about': 'About',
+                'contact': 'Contact'
+	        },
+        });
+
+        navbar.render();
+        app.render();
+    </script>
+</body>
+</html>
