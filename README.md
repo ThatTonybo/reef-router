@@ -1,18 +1,26 @@
 # reef-router
 A simple, single page router for [Reef](https://github.com/cferdinandi/reef) by Chris Ferdinandi.
 
-## Use
-First steps is to download either reef-router.js or reef-router.min.js from `dist/`, and import it into your project's `index.html`, just after Reef itself:
+## Install
+Installing reef-router is as easy as dropping in a CDN link after loading Reef, thanks to ddd:
 ```html
-<div id="app"></div>
-
-<script src="reef.min.js"></script>
-<script src="reef-router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reef-router"></script>
 ```
-If you want, you can also install it through `npm` or `yarn`:
+You can also install it through `npm` or `yarn`:
 ```
 npm install reef-router
 yarn add reef-router
+```
+Or, you can download the standard/minified files from the `dist/` directory.
+
+## Use
+First steps is to import reef-router into your project's `index.html`, just after Reef itself:
+```html
+<div id="app"></div>
+
+<!-- you can grap a copy of reef-router many ways; see "Install" -->
+<script src="reef.min.js"></script>
+<script src="reef-router.min.js"></script>
 ```
 
 Next, you'll need to create a (or modify an existing) Reef app to act as the main renderer. For it to work, you'll need to include two things:
