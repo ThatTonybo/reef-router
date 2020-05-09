@@ -9,6 +9,11 @@ First steps is to download either reef-router.js or reef-router.min.js from `dis
 <script src="reef.min.js"></script>
 <script src="reef-router.min.js"></script>
 ```
+If you want, you can also install it through `npm` or `yarn`:
+```
+npm install reef-router
+yarn add reef-router
+```
 
 Next, you'll need to create a (or modify an existing) Reef app to act as the main renderer. For it to work, you'll need to include two things:
 * An if/else or switch/case block for each page, returning the content to render
