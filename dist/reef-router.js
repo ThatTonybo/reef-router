@@ -1,6 +1,7 @@
 /*
     reef-router 1.0
     Created by ThatTonybo (github.com/ThatTonybo)
+    Licensed under the MIT License
 */
 
 class ReefRouter {
