@@ -1,0 +1,28 @@
+{
+  "name": "reef-router",
+  "version": "1.0.0",
+  "description": "A simple, single page router for Reef by Chris Ferdinandi",
+  "main": "dist/reef-router.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reef",
+    "router",
+    "routing",
+    "reefjs"
+  ],
+  "author": "ThatTonybo <thattonybo@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThatTonybo/reef-router.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThatTonybo/reef-router/issues"
+  },
+  "homepage": "https://github.com/ThatTonybo/reef-router#readme"
+}
